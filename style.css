@@ -1,0 +1,281 @@
+/*global*/
+*{
+    margin:0;
+}
+html{
+font-size: 62.5%;
+}
+:root{
+    --primary:rgb(27, 216, 153) /*setting variable of "--primary" to a color, then use var(--primary) to select color*/
+}
+
+body{
+    font-family: 'Lora', serif;
+    /*background-color: red; mobile */
+}
+
+p{
+    font-size: 1.6rem;
+    margin:2rem;
+    /* line-height:1.5; to double space*/
+}
+
+/*utilities*/
+.center{
+    text-align: center
+}
+img{
+    max-width: 100%;
+}
+.generic-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+/*header*/
+
+.main-header{
+ 
+    background-color: var(--primary);
+    color:black;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+.main-header h1{
+    color:black;
+    font-size: 5.5rem;
+    width:50rem;
+    text-align: center;
+    }
+.main-header h2{
+    color:white;
+    text-align: center;
+    font-size: 2.5rem;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    font-weight: lighter;
+}
+@media(min-width:768px){
+    .main-header{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; /*centers in the space as a whole */ 
+        height:40rem;
+    }
+    .main-header h1{
+        font-size:8rem;
+        width:50rem;
+        padding: 5rem;
+    }
+}
+.icons-container{
+
+    text-align: center;
+    margin-top: 3rem;
+    text-shadow: 2px 2px white;
+}
+.icons-container i{
+    font-size: 4rem;
+    text-decoration: none;
+    color: black;
+}
+.icons-container i:hover{
+    color: blanchedalmond;
+}
+.menu{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.menu a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.menu a:hover{
+    color: black;
+}
+@media(min-width:768px){
+    .menu{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu a{
+        font-size: 1.6rem;
+        margin-right: 2rem;
+    }
+}
+/*main*/
+.img-container{
+    width: 150px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+.img-container img{
+    border-radius: 50%;
+    border:5px solid black;
+    padding: 4px;
+}
+.site-footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top:1rem;
+}
+.site-footer .icons-container a i{
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: none;
+    padding-bottom: 1rem;
+}
+.flex-wrapper{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+.page-header{
+    font-size: 3rem;
+    padding: 3rem;
+}
+
+header.second-header{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary);
+    height:auto;
+    align-items: center;
+    
+}
+header.second-header h1{
+    font-size: 4rem;
+    padding-left:1rem;
+}
+@media(min-width:768px) {
+    header.second-header{
+        flex-direction: row;
+        height: 7vh;
+    }
+    
+}
+
+/* Projects page CSS */
+/* .project-list{
+    font-size: 1.6rem;
+    margin-left: 4rem;
+} */
+.project-container{
+display: flex;
+flex-direction: column;
+margin-right: auto;
+margin-left: auto;
+width: 40%;
+}
+.project-list{
+    font-size: 1.6rem;
+}
+
+
+/* Education Page CSS */
+h3{
+    text-align: center;
+    font-size: 3rem;
+}
+h4{
+    font-size: 2rem;
+}
+.aside-education{
+    display: none;
+}
+.education-container{
+    display: flex;
+    flex-direction: column;
+}
+.div-education{
+    padding: 3rem;
+}
+
+@media(min-width:768px) {
+    .aside-education{
+        display: block;
+        background-color: #e1e1e1;
+        padding:3rem;
+    }
+    .aside-education ul{
+        width:14rem;
+    }
+    .education-container{
+        flex-direction: row;
+    }
+    .aside-education ul li{
+        list-style: none;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        width:100%;
+    }
+    .aside-education ul li:hover{
+        border-right: 5px solid black;
+}
+}
+/* Contact Page */
+.input-form{
+    display: flex;
+    padding:1rem;
+}
+.btn-form{
+    display: flex;
+    justify-content: flex-end;
+}
+form{
+    border:1px solid black;
+    border-radius: 5px;
+    padding:1rem;
+}
+label,input[type=email],input[type=text]{
+    font-size: 1.6rem;
+}
+input[type=text],input[type=email],textarea{
+    border:none;
+    background-color: lightgray;
+    border-radius: 5px;
+    flex-basis: 100%;
+}
+label{
+    flex-basis: 15rem;
+}
+input[type=submit]{
+    width: 10rem;
+    background-color: var(--primary);
+    border:none;
+    padding:1rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+/* Courses Page */
+.course-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:1rem;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+}
+.course-element{
+    background-color: white;
+    border: 2px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    border-radius: 3px;
+}
